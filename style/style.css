@@ -1,0 +1,12 @@
+
+.grid{
+    border:1px solid rgb(235, 233, 233);
+    width: 4vh;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+}
+
+.row{
+    display:flex;
+}
