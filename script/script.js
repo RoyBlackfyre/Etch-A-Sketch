@@ -1,5 +1,19 @@
 
 const gridContainer = document.querySelector("#grid-container")
+const generateGridButton = document.querySelector("#button-grid-generator")
+
+document.body.addEventListener("click",(e)=>{
+    if(e.target.id === "button-grid-generator"){
+        const promptInput = prompt("Enter size of grid from 1 to 100")
+        const gridSize = parseInt(promptInput)
+        if(0<gridSize && gridSize<=100){
+            gridContainer.innerHTML=""
+            generateGrid(gridSize)
+        } else {
+            alert("Invalid Input")
+        }
+    }
+})
 
 function generateGrid(gridSize){
 
