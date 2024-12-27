@@ -10,3 +10,12 @@ for (let gridRow = 0; gridRow < 16; gridRow++) {
         row.appendChild(newDiv)
     }
 }
+
+const gridObjects = document.querySelectorAll(".grid")
+
+gridObjects.forEach((grid)=>{
+    grid.addEventListener("mouseenter",()=>{
+        grid.style.backgroundColor = "black"
+    })
+})
+
