@@ -1,4 +1,13 @@
 
+@font-face{
+    font-family: "miFuente";
+    src: url(/home/roel/Fonts/etchasketch/EASTRIAL.ttf) format('truetype')
+}
+
+#page-title{
+    text-align: center;
+    font-family: "miFuente",sans-serif;
+}
 .grid{
     border:1px solid rgb(235, 233, 233);
     box-sizing: border-box;
@@ -10,9 +19,24 @@
     flex: 1 0 auto;
 }
 
-.grid-container {
+#grid-container {
     aspect-ratio: 1/1;
     height: 60vh;
     display:flex;
     flex-direction: column;
+    border: 16px solid red;
+    border-radius: 16px;
+    margin: 0 auto;
 }
+
+#layout {
+    display:flex;
+    flex-direction: column;
+}
+
+#button-grid-generator {
+    width: 30vw;
+    align-self: center;
+    margin-top: 2vh;
+}
+
