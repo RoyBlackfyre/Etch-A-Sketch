@@ -4,6 +4,7 @@ const generateGridButton = document.querySelector("#button-grid-generator")
 const blackButton = document.querySelector("#button-black-fill")
 const rainbowButton = document.querySelector("#button-rainbow-fill")
 
+generateGrid(3)
 
 document.body.addEventListener("click",(e)=>{
     if(e.target === generateGridButton){
@@ -46,6 +47,8 @@ function fillBlack(){
 
             gridObjects.forEach((grid)=>{
                 grid.addEventListener("mouseenter",()=>{
+                    const actualStyle = getComputedStyle(grid)
+                    grid.style.opacity = parseFloat(actualStyle.opacity) +.1
                     grid.style.backgroundColor = "black"
                 })
             })
@@ -56,8 +59,9 @@ function fillRainbow(){
     const gridObjects = document.querySelectorAll(".grid")
         
     gridObjects.forEach((grid)=>{
-            
             grid.addEventListener("mouseenter",()=>{
+                const actualStyle = getComputedStyle(grid)
+                grid.style.opacity = parseFloat(actualStyle.opacity) +.1
                 grid.style.backgroundColor = generateRandomColor()
             })
         })
