@@ -34,9 +34,70 @@
     flex-direction: column;
 }
 
-#button-grid-generator {
-    width: 30vw;
+
+
+#button-container {
+    display:flex;
+    flex-direction: row;
+    width: 60vh;
     align-self: center;
-    margin-top: 2vh;
+    margin-top: 4vh;
+    justify-content: space-between;
+}
+
+#button-grid-generator {
+    width: 15vh;
+}
+
+#fill-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:1vh;
+    width: 30vh;
+}
+
+#text-fill {
+    font-size: 3.5vh;
+}
+
+#button-black-fill {
+    aspect-ratio: 1/1;
+    height: 3.6vh;
+    background-color: black;
+    border: .3vh solid gray;
+    border-radius: .3vh;
+    padding:0;
+}
+
+
+#button-rainbow-fill {
+    aspect-ratio: 1/1;
+    height: 3.6vh;
+    padding:0;
+    border: .3vh solid gray;
+    border-radius: .3vh;
+    display:flex;
+    flex-direction: row;
+}
+
+#red-fill {
+    background-color: red;
+    height: 100%;
+    flex-grow: 1;
+}
+
+#green-fill {
+    background-color: rgb(34, 119, 34);
+    height: 100%;
+    flex-grow: 1;
+
+}
+
+#blue-fill {
+    background-color: rgb(19, 53, 165);
+    height: 100%;
+    flex-grow: 1;
 }
 
