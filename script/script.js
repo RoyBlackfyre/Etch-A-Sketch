@@ -1,6 +1,7 @@
 
 const gridContainer = document.querySelector("#grid-container")
 const generateGridButton = document.querySelector("#button-grid-generator")
+const blackButton = document.querySelector("#button-black-fill")
 
 document.body.addEventListener("click",(e)=>{
     if(e.target.id === "button-grid-generator"){
@@ -12,6 +13,10 @@ document.body.addEventListener("click",(e)=>{
         } else {
             alert("Invalid Input")
         }
+    }
+
+    if(e.target.id === "button-black-fill"){
+        fillBlack()
     }
 })
 
@@ -27,15 +32,17 @@ function generateGrid(gridSize){
             newDiv.setAttribute("class","grid")
             row.appendChild(newDiv)
         }
-        const gridObjects = document.querySelectorAll(".grid")
-
-        gridObjects.forEach((grid)=>{
-            grid.addEventListener("mouseenter",()=>{
-                grid.style.backgroundColor = "black"
-            })
-        })
     }
 }
 
+function fillBlack(){
+    const gridObjects = document.querySelectorAll(".grid")
+
+            gridObjects.forEach((grid)=>{
+                grid.addEventListener("mouseenter",()=>{
+                    grid.style.backgroundColor = "black"
+                })
+            })
+}
 
 
