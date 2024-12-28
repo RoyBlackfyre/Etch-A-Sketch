@@ -3,8 +3,7 @@ const gridContainer = document.querySelector("#grid-container")
 const generateGridButton = document.querySelector("#button-grid-generator")
 const blackButton = document.querySelector("#button-black-fill")
 const rainbowButton = document.querySelector("#button-rainbow-fill")
-
-generateGrid(3)
+const resetButton = document.querySelector("#button-reset")
 
 document.body.addEventListener("click",(e)=>{
     if(e.target === generateGridButton){
@@ -25,7 +24,12 @@ document.body.addEventListener("click",(e)=>{
     if(e.target.closest("#button-rainbow-fill")){
         fillRainbow()
     }
+
+    if(e.target === resetButton){
+        resetGrid()
+    }
 })
+
 
 function generateGrid(gridSize){
 
@@ -40,6 +44,15 @@ function generateGrid(gridSize){
             row.appendChild(newDiv)
         }
     }
+}
+
+function resetGrid(){
+    const gridObjects = document.querySelectorAll(".grid")
+
+            gridObjects.forEach((grid)=>{
+                grid.style.backgroundColor = "white"
+                grid.style.opacity = 0
+            })
 }
 
 function fillBlack(){
